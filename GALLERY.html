@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .icon {
+            margin-left: 5px;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+        }
+
+        .icon img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+        }
+
+        .social-icon {
+            margin-right: 10px;
+            display: flex;
+            padding: 5px;
+        }
+
+        .social-icon img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .navbar-container {
+            background-color: rgb(230, 228, 228);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .navbar-links-right {
+            list-style: none;
+            margin: 0;
+            padding: 10px;
+            display: flex;
+        }
+
+        .navbar-link {
+            color: rgb(82, 81, 81);
+            text-decoration: none;
+            font-size: 18px;
+            padding: 15px;
+        }
+
+        .navbar-link.active {
+            background-color: green;
+            color: white;
+        }
+
+        .navbar-link:not(.active):hover {
+            background-color: rgb(230, 228, 228);
+            color: rgb(82, 81, 81);
+        }
+
+        .gallery-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        input[type="search"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .photos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .photo {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            max-width: 300px; /* Adjust this value to change the card size */
+        }
+
+        .photo img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .photo p {
+            margin: 5px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="contact-info">
+            <div class="icon">
+                <img src="img/phone1.png" alt="Phone Icon">
+            </div>
+            <div>
+                +970-592678090
+            </div>
+            <div class="icon">
+                <img src="img/messages1.png" alt="Email Icon">
+            </div>
+            <div>
+                aboodomaral@gmail.com
+            </div>
+        </div>
+        <nav class="social-icons">
+            <a class="social-icon" href="https://www.facebook.com/">
+                <img src="img/facebook1.png" alt="Facebook Icon">
+            </a>
+            <a class="social-icon" href="https://twitter.com/">
+                <img src="img/twitter1.png" alt="Twitter Icon">
+            </a>
+            <a class="social-icon" href="https://www.google.com/">
+                <img src="img/google1.png" alt="Google Icon">
+            </a>
+            <a class="social-icon" href="https://www.linkedin.com/feed/">
+                <img src="img/inkedin.png" alt="LinkedIn Icon">
+            </a>
+            <a class="social-icon" href="https://www.pinterest.com/">
+                <img src="img/pinterest.png" alt="Pinterest Icon">
+            </a>
+        </nav>
+    </header>
+
+    <div class="navbar-container">
+        <ul class="navbar-links-left">
+        </ul>
+        <ul class="navbar-links-right">
+            <li><a class="navbar-link " href="index.html">HOME</a></li>
+            <li><a class="navbar-link" href="#">ABOUT US</a></li>
+            <li><a class="navbar-link" href="services.html">SERVICES</a></li>
+            <li><a class="navbar-link active" href="#">GALLERY</a></li>
+            <li><a class="navbar-link" href="PRICING.html">PRICING</a></li>
+            <li><a class="navbar-link" href="CONTACT.html">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <div class="gallery-container">
+        <input type="search" id="search" placeholder="Search">
+        <div class="photos">
+        </div>
+    </div>
+   
+
+    <script>
+        const photos = [
+            { title: "supermarkets", url: "https://i.guim.co.uk/img/media/4cdec41494a8b0401f66cd0e6e00c9f51abbbe1e/0_200_3000_1800/master/3000.jpg?width=620&dpr=2&s=none" },
+            { title: "hospital", url: "http://s41951.pcdn.co/wp-content/uploads/2023/03/BHWC-Exterior-Emergency-Entrance-2023HR-7.jpg-1536x1024.jpg.webp" },
+            { title: "restaurant", url: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" },
+            { title: "clothing store", url: "https://www.beautifulcng.com/wp-content/uploads/2021/03/how-to-open-a-clothing-store.jpg" },
+            { title: "nicke shop", url: "https://i.insider.com/61eee7be2b43ff00185e46d3?width=1000&format=jpeg&auto=webp" },
+            { title: "addidas shop", url: "https://kenhz.net/wp-content/uploads/2022/09/giay-adidas-quang-ngai.jpg" },
+            { title: "shoes shop", url: "https://www.merchant1948.co.nz/media/wysiwyg/Storelocator/Store_locator_815_x_718_image_1.jpg" },
+            { title: "Ice Cream shop", url: "https://portsoyicecream.co.uk/site/wp-content/uploads/ice-cream-collection.jpg" },
+            { title: "levi's ", url: "https://ca1-lakeside.dccdn.net/images/business-directory/_680x438_fit_center-center_90_none/Levis1.jpg?v=1652970429" },
+            { title: "Tommy hilfiger", url: "https://www.panorama.lt/assets/Uploads/ShopGallery/Tommy-Hilfiger__FillMaxWzEyODAsODAwXQ_CompressedW10.jpg" },
+            { title: "Al-safeer", url: "img/Al-safeer.jpg" },
+
+        ];
+
+        function display() {
+            const input = document.getElementById("search").value.toLowerCase();
+            const p = document.querySelector(".photos");
+            p.innerHTML = "";
+
+            photos.forEach((photo) => {
+                if (photo.title.toLowerCase().includes(input)) {
+                    const x = document.createElement("div");
+                    x.classList.add("photo");
+                    x.innerHTML = `
+                        <img src="${photo.url}" alt="${photo.title}">
+                        <p>${photo.title}</p>
+                    `;
+                    p.appendChild(x);
+                }
+            });
+        }
+
+        display();
+        document.getElementById("search").addEventListener("input", display);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Page Title</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+        }
+
+        .icon {
+            margin-left: 5px;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+        }
+
+        .icon img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+        }
+
+        .social-icon {
+            margin-right: 10px;
+            display: flex;
+            padding: 5px;
+        }
+
+        .social-icon img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .navbar-container {
+            background-color: rgb(230, 228, 228);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .navbar-links-r {
+            list-style: none;
+            margin: 0;
+            padding: 10px;
+            display: flex;
+        }
+
+        .navbar-link {
+            color: rgb(82, 81, 81);
+            text-decoration: none;
+            font-size: 18px;
+            padding: 15px;
+        }
+
+        .navbar-link.active {
+            background-color: green;
+            color: white;
+        }
+
+        .navbar-link:not(.active):hover {
+            background-color: rgb(230, 228, 228);
+            color: rgb(82, 81, 81);
+        }
+
+        .contact-container {
+            background-image: url('https://t4.ftcdn.net/jpg/04/54/57/63/360_F_454576300_AN2dAthqhFl11iIoqHBgl3mpyXyzREnx.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 80vh; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: rgb(0, 0, 0);
+            text-align: center;
+        }
+
+        .contact-info-text {
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .contact-info-item {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .contact-info-item a,p {
+            color: rgb(68, 151, 0);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="contact-info">
+            <div class="icon">
+                <img src="img/phone1.png" alt="Phone Icon">
+            </div>
+            <div>
+                +970-592678090
+            </div>
+            <div class="icon">
+                <img src="img/messages1.png" alt="Email Icon">
+            </div>
+            <div>
+                aboodomaral@gmail.com
+            </div>
+        </div>
+        <nav class="social-icons">
+            <a class="social-icon" href="https://www.facebook.com/">
+                <img src="img/facebook1.png" alt="Facebook Icon">
+            </a>
+            <a class="social-icon" href="https://twitter.com/">
+                <img src="img/twitter1.png" alt="Twitter Icon">
+            </a>
+            <a class="social-icon" href="https://www.google.com/">
+                <img src="img/google1.png" alt="Google Icon">
+            </a>
+            <a class="social-icon" href="https://www.linkedin.com/feed/">
+                <img src="img/inkedin.png" alt="LinkedIn Icon">
+            </a>
+            <a class="social-icon" href="https://www.pinterest.com/">
+                <img src="img/pinterest.png" alt="Pinterest Icon">
+            </a>
+        </nav>
+    </header>
+
+    <div class="navbar-container">
+        <ul class="navbar-links-left">
+        </ul>
+        <ul class="navbar-links-r">
+            <li><a class="navbar-link" href="#">HOME</a></li>
+            <li><a class="navbar-link" href="#">ABOUT US</a></li>
+            <li><a class="navbar-link" href="services.html">SERVICES</a></li>
+            <li><a class="navbar-link" href="GALLERY.html">GALLERY</a></li>
+            <li><a class="navbar-link" href="PRICING.html">PRICING</a></li>
+            <li><a class="navbar-link active" href="CONTACT.html">CONTACT</a></li>
+        </ul>
+    </div>
+
+    <div class="contact-container">
+        <div class="contact-info-text">Contact Information</div>
+        <div class="contact-info-item">
+            <span>Phone:</span> <a href="tel:+970-592678090">+970-592678090</a>
+        </div>
+        <div class="contact-info-item">
+            <span>Email:</span> <a href="mailto:aboodomaral@gmail.com">aboodomaral@gmail.com</a>
+        </div>
+        <div class="contact-info-item">
+            <span>Web Page:</span> <a href="http://wb1201811.studentswebprojects.ritaj.ps/" target="_blank">click here</a>
+        </div>
+        <div class="contact-info-item">
+            Address:<p>Bir-nabala , Ramallah</p> 
+        </div>
+    </div>
+</body>
+</html>
