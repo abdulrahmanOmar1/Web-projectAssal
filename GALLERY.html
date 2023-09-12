@@ -200,6 +200,8 @@
             const input = document.getElementById("search").value.toLowerCase();
             const p = document.querySelector(".photos");
             p.innerHTML = "";
+            let foundResults = false;
+
 
             photos.forEach((photo) => {
                 if (photo.title.toLowerCase().includes(input)) {
@@ -210,8 +212,14 @@
                         <p>${photo.title}</p>
                     `;
                     p.appendChild(x);
+                    foundResults = true;
+
                 }
             });
+
+            if (!foundResults) {
+            p.innerHTML = "<p>No results found</p>";
+        }
         }
 
         display();
