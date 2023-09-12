@@ -94,7 +94,7 @@
             margin-bottom: 20px;
         }
 
-        .photos {
+    .photos {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -108,15 +108,7 @@
     max-width: 300px; 
     transition: transform 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
 }
-
-.photo:hover {
-    transform: scale(1.05);
-    border: 2px solid green; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
-}
-
-
-        .photo img {
+.photo img {
             max-width: 100%;
             height: auto;
         }
@@ -125,6 +117,12 @@
             margin: 5px 0;
             font-weight: bold;
         }
+
+.photo:hover {
+    transform: scale(1.05);
+    border: 2px solid green; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
     </style>
 </head>
 <body>
